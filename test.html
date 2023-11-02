@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Clothing</title>
+    <style>
+        .card {
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: gray;
+        }
+
+        .price {
+            color: rgb(76, 146, 122);
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row mb-4" id="cardContainer">
+    </div>
+</div>
+
+<script>
+    // Define your JSON data
+    const jsonData = [
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        {
+            imgSrc: 'hm1.jpg',
+            title: 'Regular fit Shacket GS02054MR',
+            brand: 'H&M',
+            originalPrice: '3400/-',
+            discount: '1000/- off',
+            discountedPrice: '2400/-',
+        },
+        // Add more data for other products
+    ];
+
+    // Get the card container
+    const cardContainer = document.getElementById('cardContainer');
+
+    // Loop through the JSON data and create cards
+    jsonData.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'col-lg-2 col-sm-6';
+        card.innerHTML = `
+            <div class="card">
+                <img class="card-img" src="${product.imgSrc}" alt="${product.title}">
+                <div class="card-body">
+                    <h5 class="card-title">${product.title}</h5>
+                    <p class="card-text">${product.brand}</p>
+                    <p><s>${product.originalPrice}</s> ${product.discount}</p>
+                    <p class="price"><b>${product.discountedPrice}</b></p>
+                </div>
+            </div>
+        `;
+        cardContainer.appendChild(card);
+    });
+</script>
+</body>
+</html>
