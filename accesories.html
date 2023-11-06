@@ -1,233 +1,407 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
-    T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-
-    C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <title>ACCESORIES</title>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>Clothing</title>
     <style>
-        #price{
-            color:rgb(76, 146, 122);
+        #price {
+            color: rgb(76, 146, 122);
         }
+
         .card {
             transition: transform 0.2s;
         }
 
         .card:hover {
-            transform: scale(1.05);
-            box-shadow:gray;
+            transform: scale(1.08);
+            box-shadow: gray;
         }
-       
-    
+
+        a {
+            animation: none;
+        }
+        .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.card-img1 {
+  width: 260px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.card-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.side-bro{
+    margin-top: 70px;
+    margin-left: 29px;
+}
+
+
+.sizes-list li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.sizes-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.sizes-list li.selected {
+  background-color: black;
+  color: #fff;
+}
+
+
     </style>
 </head>
-<body> 
-   
-   
-<div id="container" class="container">
 
-    <div id="row" class="row  mb-4">
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/chain2.jpg" alt="h&m shacket..">
+<body>
+    <div id="container" class="container">
+        <div id="row" class="row mb-4">
+            <script>
+
+                const cards = [
+                    {
+                        id: 1,
+                        img: "ring1 (1).jpg",
+                        name: "Single piece diamond ring",
+                        brand: "H&M",
+                        description: "This is suitable dor every outfit .",
+                        size: ["6", "8", "9", "10"],
+                        originalPrice: 1400,
+                        discount: 100,
+                        finalPrice: 1300
+                    },
+                    {
+                        id: 2,
+                        img: "ring2 (1).jpg",
+                        name: "minimal ring with diamond powder",
+                        brand: "Zara",
+                        description: "This is suitable dor every outfit .",
+                        size: ["6", "7", "8"],
+                        originalPrice: 1200,
+                        discount: 80,
+                        finalPrice: 1120
+                    },
+                    {
+                        id: 3,
+                        img: "ear1 (1).jpg",
+                        name: "diamond ear rings WE23SW",
+                        brand: "H&M",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 800,
+                        discount: 400,
+                        finalPrice: 400
+                    },
+                    {
+                        id: 4,
+                        img: "ear2 (1).jpg",
+                        name: "simple sliver ear rings ASD3S",
+                        brand: "H&M",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 1200,
+                        discount: 600,
+                        finalPrice: 1200
+                    },
+                    {
+                        id: 5,
+                        img: "ear4 (1).jpg",
+                        name: "simple ear rigs RT34FGAG",
+                        brand: "Zara",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L"],
+                        originalPrice: 800,
+                        discount: 200,
+                        finalPrice: 600
+                    },
+                    {
+                        id: 6,
+                        img: "chain3 (1).jpg",
+                        name: "chain with green stone locket",
+                        brand: "Zara",
+                        description: "This is suitable dor every outfit .",
+                        size:["short", "mid", "long"],
+                        originalPrice: 700,
+                        discount: 400,
+                        finalPrice: 300
+                    },
+                    {
+                        id: 7,
+                        img: "chain4 (1).jpg",
+                        name: "chain with red heart shaped locket",
+                        brand: "H&M",
+                        description: "This is suitable dor every outfit .",
+                        size: ["short", "mid", "long"],
+                        originalPrice: 400,
+                        discount: 100,
+                        finalPrice: 300
+                    },
+                    {
+                        id: 8,
+                        img: "caps (1).jpg",
+                        name: "women bracelet with black design",
+                        brand: "Zara",
+                        description: "TThis is suitable dor every outfit .",
+                        size: ["28", "30", "32", "34", "36"],
+                        originalPrice: 1400,
+                        discount: 200,
+                        finalPrice: 1200
+                    },
+                    {
+                        id: 9,
+                        img: "brace2 (1).jpg",
+                        name: "eye designed bracelet with push lock",
+                        brand: "H&M",
+                        description: "This is suitable dor every outfit .",
+                        size:["28", "30", "32", "34", "36"],
+                        originalPrice: 600,
+                        discount: 200,
+                        finalPrice: 400
+                    },
+                    {
+                        id: 10,
+                        img: "scarf1 (1).jpg",
+                        name: "black and beidge printed scarf",
+                        brand: "Zara",
+                        description: "TThis is suitable dor every outfit .",
+                        size: ["28", "30", "32", "34", "36"],
+                        originalPrice: 900,
+                        discount: 100,
+                        finalPrice: 800
+                    },
+                    {
+                        id: 11,
+                        img: "menchain (1).jpg",
+                        name: "men silver chain GH45HG",
+                        brand: "Zara",
+                        description: "This is suitable dor every outfit .",
+                        size:["short", "mid", "long"],
+                        originalPrice: 800,
+                        discount: 200,
+                        finalPrice: 600
+                    },
+                    {
+                        id: 12,
+                        img: "menbracelet (1).jpg",
+                        name: "men bracelet with black leather",
+                        brand: "Zara",
+                        description: "This is suitable dor every outfit .",
+                        size:["28", "30", "32", "34", "36"],
+                        originalPrice: 700,
+                        discount: 300,
+                        finalPrice: 400
+                    },
+                    {
+                        id: 13,
+                        img: "menbracelet (1).jpg",
+                        name: "men bracelet with black leather",
+                        brand: "H&M",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 1600,
+                        discount: 700,
+                        finalPrice: 900
+                    },
+                    {
+                        id: 14,
+                        img: "chain3 (1).jpg",
+                        name: "chain with green stone locket",
+                        brand: "Jack & Jones",
+                        description: "This is suitable dor every outfit .",
+                        size: ["short", "mid", "long"],
+                        originalPrice: 600,
+                        discount: 100,
+                        finalPrice: 500
+                    },
+                    {
+                        id: 15,
+                        img: "ear4 (1).jpg",
+                        name: "simple ear rigs RT34FGAG",
+                        brand: "VERAMODA",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 1200,
+                        discount: 200,
+                        finalPrice: 1000
+                    },
+                    {
+                        id: 16,
+                        img: "ring2 (1).jpg",
+                        name: "minimal ring with diamond powder",
+                        brand: "Zara",
+                        description: "This is suitable dor every outfit .",
+                        size: ["6", "7", "8", "9"],
+                        originalPrice: 1500,
+                        discount: 400,
+                        finalPrice: 1100
+                    },
+                    {
+                        id: 17,
+                        img: "ear1 (1).jpg",
+                        name: "diamond ear rings WE23SW",
+                        brand: "HugoBoss",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L"],
+                        originalPrice: 1700,
+                        discount: 1100,
+                        finalPrice: 600
+                    },
+                    {
+                        id: 18,
+                        img: "ear4 (1).jpg",
+                        name: "simple ear rigs RT34FGAG",
+                        brand: "VigoRA",
+                        description: "This is suitable dor every outfit .",
+                        size: ["S", "M", "L"],
+                        originalPrice: 1220,
+                        discount: 600,
+                        finalPrice: 620
+                    }
+                ];
+
+                cards.forEach(card => {
+                    document.write(`
+            <div class="col-lg-2 col-sm-6 p-2">
+              <div id="card${card.id}" class="card" onclick="viewCard(${card.id})">
+                <img class="card-img h-auto" src="${card.img}" alt="${card.name}">
                 <div class="card-body">
-                    <h7 class="card-title ">Dainty Golden Chain GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>340/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>240/-</b></p>
+                  <h7 class="card-title">${card.name}</h7>
+                  <p class="card-text">${card.brand}</p>
+                  <p><s>${card.originalPrice}/-</s> ${card.discount}/- off</p>
+                  <p id="price" class="card-subtitle"><b>${card.finalPrice}/-</b></p>
                 </div>
+              </div>
             </div>
+          `);
+                });
+
+                function viewCard(id) {
+  const card = cards.find(card => card.id === id);
+  const modal = `
+    <div class="modal" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cardModalLabel">${card.name}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex p-2">
+              <img class="card-img1" src="${card.img}" alt="${card.name}">
+              <div class="side-bro">
+                <p class="card-text fw-bolder">${card.description}</p>
+                <div>
+                  <p class="card-text fw-bold">${card.brand}</p>
+                  <p><s>${card.originalPrice}/-</s> ${card.discount}/- off</p>
+                  <p id="price" class="card-subtitle"><b>${card.finalPrice}/-</b></p>
+                  <div class="sizes-container">
+                    <p class="fw-bold">Sizes:</p>
+                    <ul class="sizes-list" style="list-style: none; padding: 0;">
+                      ${card.size.map(size => `<li>${size}</li>`).join("")}
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="p-2">
+                    <a href=" adress.html"><button class="btn btn-dark p-2">Buy Now</button><a>
+                    <button class="btn btn-secondary p-2">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/ear1.jpg" alt="Zara shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Minimalistic golden Earring SLMLM30054MK</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>699/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>599/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/menchain.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Men Chain</h7> GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>399/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>249/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/ring1.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Stone ring</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>899/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>799/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/chain1.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Dainty Golden Chain GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>340/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>240/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/ear2.jpg" alt="Zara shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Minimalistic golden Earring SLMLM30054MK</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>699/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>599/-</b></p>
-                </div>
-            </div>
-        </div>  
+      </div>
     </div>
-    <div class="row  md-4">
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/menglass.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Men cool shades</h7> GS02054MR</h7><br><br>
-                    <p class="card-text">H&M</p>
-                   <p><s>1999/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>1949/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/ring2.jpg" alt="h&m shacket.."><br><br>
-                <div class="card-body">
-                    <h7 class="card-title ">Single Stone ring GHR343M</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>899/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>799/-</b></p>
-                   <p><small>Extra 150/- off for new</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                    <img class="card-img" src="img/scarf1.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title "> Womens Checked Scarf</h7> GS02054MR</h7><br><br>
-                    <p class="card-text">H&M</p>
-                   <p><s>499/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>349/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/chain3.jpg" alt="h&m shacket.."><br><br>
-                <div class="card-body">
-                    <h7 class="card-title ">Dainty Golden Chain GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                    <p><s>340/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>240/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/menbracelet.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title "></h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>499/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>349/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="img/scarf2.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Unisex Scarf SR02054IH</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>1700/-</s> 400/- off</p><p id="price" class="card-subtitle"><b>1300/-</b></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row mt-4 mb-4">
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="img/menring.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Men Rings</h7> GS02054MR</h7><br><br>
-                    <p class="card-text">H&M</p>
-                   <p><s>499/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>349/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="img/brace2.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Bracelet</h7> GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>899/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>749/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="img/brace1.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Women Bracelet</h7> GS02054MR</h7><br><br>
-                    <p class="card-text">H&M</p>
-                   <p><s>499/-</s> 50/- off</p><p id="price" class="card-subtitle"><b>349/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="img/caps.jpg" alt="h&m shacket.."><br><br>
-                <div class="card-body">
-                    <h7 class="card-title ">Unisex caps(pack of 2) SR02054IH</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>1700/-</s> 400/- off</p><p id="price" class="card-subtitle"><b>1300/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="img/ring3.jpg" alt="h&m shacket.."><br><br>
-                <div class="card-body">
-                    <h7 class="card-title ">Single Stone ring</h7><br><br>
-                    <p class="card-text">H&M</p>
-                   <p><s>899/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>799/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="img/chain4.jpg" alt="h&m shacket.."><br><br>
-                <div class="card-body">
-                    <h7 class="card-title ">Dainty heart Chain GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>340/-</s> 100/- off</p><p id="price" class="card-subtitle"><b>240/-</b></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="4"></div> <!--footer-->
-<script>
-    load("footer.html");
-    function load(url)
-    {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(4).innerHTML = req.responseText;
+  `;
+  document.body.insertAdjacentHTML("beforeend", modal);
+  const cardModal = new bootstrap.Modal(document.getElementById("cardModal"));
+  cardModal.show();
+
+  const sizesList = document.querySelector(".sizes-list");
+  sizesList.addEventListener("click", (event) => {
+    const selectedSize = event.target;
+    if (selectedSize.tagName === "LI") {
+      const sizes = sizesList.querySelectorAll("li");
+      sizes.forEach((size) => {
+        size.classList.remove("selected");
+      });
+      selectedSize.classList.add("selected");
     }
-</script>
+  });
 
-    
+  const closeModal = () => {
+    const modal = document.getElementById("cardModal");
+    modal.remove();
+  };
+
+  const closeButton = document.querySelector(".btn-close");
+  closeButton.addEventListener("click", closeModal);
+
+  const modalBackdrop = document.querySelector(".modal-backdrop");
+  modalBackdrop.addEventListener("click", closeModal);
+}
+
+
+
+            </script>
+        </div>
+    </div>
+    <div id="4"></div> 
+    <script>
+        load("footer.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
 </body>
+
 </html>

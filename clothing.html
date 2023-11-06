@@ -1,245 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
-    T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-
-    C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <title>Clothing</title>
     <style>
-        #price{
-            color:rgb(76, 146, 122);
+        #price {
+            color: rgb(76, 146, 122);
         }
+
         .card {
             transition: transform 0.2s;
         }
 
         .card:hover {
             transform: scale(1.08);
-            box-shadow:gray;
+            box-shadow: gray;
         }
-       a{
-        animation:none;
-       }
-    
+
+        a {
+            animation: none;
+        }
+        .modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.card-img1 {
+  width: 260px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.card-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.side-bro{
+    margin-top: 70px;
+    margin-left: 29px;
+}
+
+
+.sizes-list li {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.sizes-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.sizes-list li.selected {
+  background-color: black;
+  color: #fff;
+}
+
+
     </style>
 </head>
-<body> 
 
-   
-<div id="container" class="container">
-<div>
-    <div>
-        <a href="clothingf.html"><button type="button" class="btn btn-light">WOMEN</button></a>
-    </div>
-</div>
-    <div id="row" class="row  mb-4">
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="hm1.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Regular fit Shacket GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>3400/-</s> 1000/- off</p><p id="price" class="card-subtitle"><b>2400/-</b></p>
-                </div>
+<body>
+    <div id="container" class="container">
+        <div>
+            <div>
+                <a href="clothingf.html"><button type="button" class="btn btn-light">WOMEN</button></a>
             </div>
         </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="hm2.jpg" alt="Zara shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Slim fit Shacket SLMLM30054MK</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>3400/-</s> 850/- off</p><p id="price" class="card-subtitle"><b>2150/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="hm3.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Slim fit corduroy shirt</h7> GS02054MR</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>1800/-</s> 450/- off</p><p id="price" class="card-subtitle"><b>1350/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="hm5.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Men Jacket  Duel Pocket JK0054AC</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>3400/-</s> 1600/- off</p><p id="price" class="card-subtitle"><b>1800/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="hm4.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Regular fit Printed Shirt PN02064RI</h7>
-                    <p class="card-text">Rare Rabbit</p>
-                   <p><s>1800/-</s> 200/- off</p><p id="price" class="card-subtitle"><b>1600/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="hm6.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Slim fit Fannel Shirt SR02054IH</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>1700/-</s> 400/- off</p><p id="price" class="card-subtitle"><b>1300/-</b></p>
-                </div>
-            </div>
-        </div>
+        <div id="row" class="row mb-4">
+            <script>
 
-        
-        
-    </div>
-    <div class="row  md-4">
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="js1.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Loose fit Jeans with fadded checks</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>3400/-</s> 300/- off</p><p id="price" class="card-subtitle"><b>3100/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="js2.jpg" alt="Zara shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Slim fit White Jeans with knee distressed</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>4200/-</s> 1200/- off</p><p id="price" class="card-subtitle"><b>3000/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="js3.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Loose fit heavy fade men jeans M121D</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>2600/-</s> 300/- off</p><p id="price" class="card-subtitle"><b>2300/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="js4.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">NavyBlue slim fit jeans JK0054AC</h7>
-                    <p class="card-text">H&M</p>
-                   <p><s>1900/-</s> 175/- off</p><p id="price" class="card-subtitle"><b>1725/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="js5.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Loose fit distressed jeans J101d</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>2400/-</s> 300/- off</p><p id="price" class="card-subtitle"><b>1900/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div id="card1"class="card">
-                <img class="card-img" src="js6.jpg" alt="h&m shacket..">
-                <div class="card-body">
-                    <h7 class="card-title ">Slim fit mid-fade Jeans SR02054IH</h7>
-                    <p class="card-text">Zara</p>
-                   <p><s>1700/-</s> 400/- off</p><p id="price" class="card-subtitle"><b>1300/-</b></p>
-                </div>
-            </div>
-        </div>
+                const cards = [
+                    {
+                        id: 1,
+                        img: "hm1.jpg",
+                        name: "Regular fit Shacket GS02054MR",
+                        brand: "H&M",
+                        description: "This regular fit shacket is made from high-quality materials and is perfect for any casual occasion.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 3400,
+                        discount: 1000,
+                        finalPrice: 2400
+                    },
+                    {
+                        id: 2,
+                        img: "hm2.jpg",
+                        name: "Slim fit Shacket SLMLM30054MK",
+                        brand: "Zara",
+                        description: "This slim fit shacket is made from soft and comfortable fabric and is perfect for layering.",
+                        size: ["S", "M", "L"],
+                        originalPrice: 3400,
+                        discount: 850,
+                        finalPrice: 2150
+                    },
+                    {
+                        id: 3,
+                        img: "hm3.jpg",
+                        name: "Slim fit corduroy shirt GS02054MR",
+                        brand: "H&M",
+                        description: "This slim fit corduroy shirt is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 1800,
+                        discount: 450,
+                        finalPrice: 1350
+                    },
+                    {
+                        id: 4,
+                        img: "hm5.jpg",
+                        name: "Men Jacket Duel Pocket JK0054AC",
+                        brand: "H&M",
+                        description: "This men's jacket is perfect for any occasion and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 3400,
+                        discount: 1600,
+                        finalPrice: 1800
+                    },
+                    {
+                        id: 5,
+                        img: "hm4.jpg",
+                        name: "Regular fit Printed Shirt PN02064RI",
+                        brand: "Rare Rabbit",
+                        description: "This regular fit printed shirt is perfect for a casual day out and is made from soft and comfortable fabric.",
+                        size: ["S", "M", "L"],
+                        originalPrice: 1800,
+                        discount: 200,
+                        finalPrice: 1600
+                    },
+                    {
+                        id: 6,
+                        img: "hm6.jpg",
+                        name: "Slim fit Fannel Shirt SR02054IH",
+                        brand: "Zara",
+                        description: "This slim fit flannel shirt is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 1700,
+                        discount: 400,
+                        finalPrice: 1300
+                    },
+                    {
+                        id: 7,
+                        img: "js1.jpg",
+                        name: "Loose fit Jeans with fadded checks",
+                        brand: "H&M",
+                        description: "This Loose fit Jeans with fadded checks is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["28", "30", "32", "34", "36"],
+                        originalPrice: 3400,
+                        discount: 300,
+                        finalPrice: 3100
+                    },
+                    {
+                        id: 8,
+                        img: "js2.jpg",
+                        name: "Slim fit White Jeans with knee distressed",
+                        brand: "Zara",
+                        description: "This Slim fit White Jeans with knee distressed is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["28", "30", "32", "34", "36"],
+                        originalPrice: 4200,
+                        discount: 1200,
+                        finalPrice: 3000
+                    },
+                    {
+                        id: 9,
+                        img: "js3.jpg",
+                        name: "Loose fit heavy fade men jeans M121D",
+                        brand: "H&M",
+                        description: "This Loose fit heavy fade men jeans M121D is perfect for a casual day out and is made from high-quality materials.",
+                        size:["28", "30", "32", "34", "36"],
+                        originalPrice: 2600,
+                        discount: 300,
+                        finalPrice: 2300
+                    },
+                    {
+                        id: 10,
+                        img: "js4.jpg",
+                        name: "NavyBlue slim fit jeans JK0054AC",
+                        brand: "Zara",
+                        description: "This NavyBlue slim fit jeans JK0054AC is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["28", "30", "32", "34", "36"],
+                        originalPrice: 1900,
+                        discount: 175,
+                        finalPrice: 1725
+                    },
+                    {
+                        id: 11,
+                        img: "js5.jpg",
+                        name: "Loose fit distressed jeans J101d",
+                        brand: "Zara",
+                        description: "This Loose fit distressed jeans J101d is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["28", "30", "32", "34", "36"],
+                        originalPrice: 2400,
+                        discount: 400,
+                        finalPrice: 2000
+                    },
+                    {
+                        id: 12,
+                        img: "js6.jpg",
+                        name: "Slim fit mid-fade Jeans SR02054IH",
+                        brand: "Zara",
+                        description: "This Slim fit mid-fade Jeans SR02054IH is perfect for a casual day out and is made from high-quality materials.",
+                        size:["28", "30", "32", "34", "36"],
+                        originalPrice: 1700,
+                        discount: 400,
+                        finalPrice: 1300
+                    },
+                    {
+                        id: 13,
+                        img: "jk1.webp",
+                        name: "Beidge Jacket",
+                        brand: "H&M",
+                        description: "This  is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 6100,
+                        discount: 1400,
+                        finalPrice: 4700
+                    },
+                    {
+                        id: 14,
+                        img: "jk2.webp",
+                        name: "Black Velvet Jacket GSM1249KM",
+                        brand: "Jack & Jones",
+                        description: "This  is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 6400,
+                        discount: 3200,
+                        finalPrice: 3200
+                    },
+                    {
+                        id: 15,
+                        img: "jk3.webp",
+                        name: "Blue denim Jacket ASD234AS",
+                        brand: "VERAMODA",
+                        description: "This  is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 1690,
+                        discount: 200,
+                        finalPrice: 1490
+                    },
+                    {
+                        id: 16,
+                        img: "jk4.webp",
+                        name: "Denim Jacket F7J345HGF",
+                        brand: "Zara",
+                        description: "This  is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 2560,
+                        discount: 160,
+                        finalPrice: 2400
+                    },
+                    {
+                        id: 17,
+                        img: "jk5.webp",
+                        name: "Men wollen Jacket JK12309MKK",
+                        brand: "HugoBoss",
+                        description: "This  is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 3700,
+                        discount: 1100,
+                        finalPrice: 2600
+                    },
+                    {
+                        id: 18,
+                        img: "jk6.jpg",
+                        name: "Black Vintage Jacket",
+                        brand: "VigoRA",
+                        description: "This  is perfect for a casual day out and is made from high-quality materials.",
+                        size: ["S", "M", "L", "XL"],
+                        originalPrice: 2560,
+                        discount: 120,
+                        finalPrice: 4240
+                    }
+                ];
 
-        
-        
+                cards.forEach(card => {
+                    document.write(`
+            <div class="col-lg-2 col-sm-6 p-2">
+              <div id="card${card.id}" class="card" onclick="viewCard(${card.id})">
+                <img class="card-img h-auto" src="${card.img}" alt="${card.name}">
+                <div class="card-body">
+                  <h7 class="card-title">${card.name}</h7>
+                  <p class="card-text">${card.brand}</p>
+                  <p><s>${card.originalPrice}/-</s> ${card.discount}/- off</p>
+                  <p id="price" class="card-subtitle"><b>${card.finalPrice}/-</b></p>
+                </div>
+              </div>
+            </div>
+          `);
+                });
+
+                function viewCard(id) {
+  const card = cards.find(card => card.id === id);
+  const modal = `
+    <div class="modal" id="cardModal" tabindex="-1" aria-labelledby="cardModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cardModalLabel">${card.name}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex p-2">
+              <img class="card-img1" src="${card.img}" alt="${card.name}">
+              <div class="side-bro">
+                <p class="card-text fw-bolder">${card.description}</p>
+                <div>
+                  <p class="card-text fw-bold">${card.brand}</p>
+                  <p><s>${card.originalPrice}/-</s> ${card.discount}/- off</p>
+                  <p id="price" class="card-subtitle"><b>${card.finalPrice}/-</b></p>
+                  <div class="sizes-container">
+                    <p class="fw-bold">Sizes:</p>
+                    <ul class="sizes-list" style="list-style: none; padding: 0;">
+                      ${card.size.map(size => `<li>${size}</li>`).join("")}
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <div class="p-2">
+                    <a href=" adress.html"><button class="btn btn-dark p-2">Buy Now</button></a>
+                    <a href="cart.html"><button class="btn btn-secondary p-2">Add to Cart</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="row mt-4 mb-4">
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="jk1.webp">
-                <div class="card-body">
-                    <h7 class="card-title">Beidge Jacket</h7>
-                    <p class="card-text">H&M</p>
-                    <p><s>6100/-</s>20%off</p><p id="price" class="card-subtitle"><b>4880/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="jk2.webp">
-                <div class="card-body">
-                    <h7 class="card-title">Black Velvet Jacket GSM1249KM</h7><br><br>
-                    <p class="card-text">Jack & Jones</p>
-                    <p><s>6200/-</s> 50%off</p><p id="price" class="card-subtitle"><b>3100/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="jk3.webp">
-                <div class="card-body">
-                    <h7 class="card-title">Blue denim Jacket ASD234AS</h7><br><br>
-                    <p class="card-text">Vera Moda</p>
-                    <p><s>1690/-</s>200/-off</p><p id="price" class="card-subtitle"><b>1490/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="jk4.webp">
-                <div class="card-body">
-                    <h7 class="card-title">Denim Jacket F7J345HGF</h7><br><br>
-                    <p class="card-text">Zara</p>
-                    <p><s>2560/-</s> 160/-off</p><p id="price" class="card-subtitle"><b>2400/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="jk5.webp">
-                <div class="card-body">
-                    <h7 class="card-title">Men wollen Jacket JK12309MKK </h7><br><br>
-                    <p class="card-text">HugoBoss</p>
-                    <p><s>3640/-</s>1100/-off</p><p id="price" class="card-subtitle"><b>3440/-</b></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-2 col-sm-6">
-            <div class="card">
-                <img class="card-img" src="jk6.jpg">
-                <div class="card-body">
-                    <h7 class="card-title">Black Vintage Jacket</h7>
-                    <p class="card-text">VigoRA</p>
-                    <p><s>2560/-</s>120/- off</p><p id="price" class="card-subtitle"><b>2440/-</b></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div id="4"></div> <!--footer-->
-<script>
-    load("footer.html");
-    function load(url)
-    {
-        req = new XMLHttpRequest();
-        req.open("GET", url, false);
-        req.send(null);
-        document.getElementById(4).innerHTML = req.responseText;
+  `;
+  document.body.insertAdjacentHTML("beforeend", modal);
+  const cardModal = new bootstrap.Modal(document.getElementById("cardModal"));
+  cardModal.show();
+
+  const sizesList = document.querySelector(".sizes-list");
+  sizesList.addEventListener("click", (event) => {
+    const selectedSize = event.target;
+    if (selectedSize.tagName === "LI") {
+      const sizes = sizesList.querySelectorAll("li");
+      sizes.forEach((size) => {
+        size.classList.remove("selected");
+      });
+      selectedSize.classList.add("selected");
     }
-</script>
+  });
 
-    
+  const closeModal = () => {
+    const modal = document.getElementById("cardModal");
+    modal.remove();
+  };
+
+  const closeButton = document.querySelector(".btn-close");
+  closeButton.addEventListener("click", closeModal);
+
+  const modalBackdrop = document.querySelector(".modal-backdrop");
+  modalBackdrop.addEventListener("click", closeModal);
+}
+
+
+
+            </script>
+        </div>
+    </div>
+    <div id="4"></div> 
+    <script>
+        load("footer.html");
+
+        function load(url) {
+            req = new XMLHttpRequest();
+            req.open("GET", url, false);
+            req.send(null);
+            document.getElementById(4).innerHTML = req.responseText;
+        }
+    </script>
 </body>
+
 </html>
